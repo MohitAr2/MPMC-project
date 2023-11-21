@@ -1,0 +1,41 @@
+# IDE/Editor specific files
+.idea/
+.vscode/
+.sublime/
+.emacs.d/
+
+# Compiled output and build artifacts
+*.class
+*.o
+*.pyc
+*.exe
+*.dll
+*.so
+*.dylib
+*.jar
+*.war
+*.ear
+*.swp
+
+# Dependency directories
+node_modules/
+vendor/
+packages/
+__pycache__/
+
+# Log files and temporary files
+*.log
+*.tmp
+*.temp
+
+# Configuration files
+.env
+.env.local
+config.ini
+
+# Personal files and sensitive information
+*.key
+*.pem
+*.p12
+*.password
+*.secret
