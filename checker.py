@@ -8,9 +8,6 @@ def sign_lang():
 def tribe_language():
     pass
 #
-def multilingual_but_accurate():
-    pass
-#
 def workers_union_helpline():  
     pass
 #
