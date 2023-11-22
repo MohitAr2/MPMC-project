@@ -3,6 +3,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import flask
+from flask import request
 
 app = flask.Flask(__name__)
 
@@ -40,9 +41,9 @@ model, tokenizer = load_model()
 with open(qa_pairs_file, "r") as json_file:
     qa_pairs = json.load(json_file)
 
-@app.route('/answer', methods=['POST'])
+@app.route('/answer', methods=['GET'])
 def answer():
-    prompt = flask.request.form.get('prompt')
+    prompt = request.args.get('prompt')
     answer = get_answer(prompt, qa_pairs, model, tokenizer)
     return answer
 

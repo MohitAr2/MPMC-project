@@ -15,8 +15,10 @@ const IndexPage = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/answer", {
-        prompt: inputValue,
+      const res = await axios.get("http://localhost:5000/answer", {
+        params: {
+          prompt: inputValue,
+        },
       });
 
       setResponse(res.data);
